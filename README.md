@@ -14,6 +14,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **Eviction**  | MITRE ATT&CK Navigator                               | [View](./Eviction.md)   |
 | **Slingshot** | Elastic Stack, Kibana                                | [View](./Slingshot.md)  |
 | **Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
+| **PS Eclipse**   | Splunk, Ransomware                                | [View](./PS Eclipse.md) |
 
 > 📌 More labs and formats (Markdown, PDF) will be added regularly.
 
