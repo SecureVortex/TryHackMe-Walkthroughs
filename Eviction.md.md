@@ -1,4 +1,5 @@
 <img width="128" height="128" alt="image" src="https://github.com/user-attachments/assets/e09719d1-b143-4fb1-8b4b-415458481ace" />
+ 
                                                                                                         **Eviction**
 
 Sunny is a SOC analyst at E-corp, which manufactures rare earth metals for government and non-government clients. She receives a classified intelligence report that informs her that an APT group (APT28) might be trying to attack organizations similar to E-corp. To act on this intelligence, she must use the MITRE ATT&CK Navigator to identify the TTPs used by the APT group, to ensure it has not already intruded into the network, and to stop it if it has.
