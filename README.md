@@ -10,9 +10,9 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 
 | 🔗 Lab Name   | 🧠 Focus Areas                                       | 📄 Walkthrough |
 |--------------|-------------------------------------------------------|----------------|
-| **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted/Retracted.docx) |
-| **Eviction**  | Windows, Enumeration, Exploitation, Post-Exploitation| [View](./Eviction/Eviction.docx) |
-| **Slingshot** | Red Teaming, Web Exploitation, Credential Harvesting | [View](./Slingshot/Slingshot.docx) |
+| **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted/Retracted.md) |
+| **Eviction**  | Windows, Enumeration, Exploitation, Post-Exploitation| [View](./Eviction/Eviction.md) |
+| **Slingshot** | Red Teaming, Web Exploitation, Credential Harvesting | [View](./Slingshot/Slingshot.md) |
 
 > 📌 More labs and formats (Markdown, PDF) will be added regularly.
 
