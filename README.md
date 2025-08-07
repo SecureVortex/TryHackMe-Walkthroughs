@@ -10,9 +10,10 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 
 | 🔗 Lab Name   | 🧠 Focus Areas                                       | 📄 Walkthrough |
 |--------------|-------------------------------------------------------|----------------|
-| **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted.md) |
-| **Eviction**  | Windows, Enumeration, Exploitation, Post-Exploitation| [View](./Eviction.md) |
-| **Slingshot** | Red Teaming, Web Exploitation, Credential Harvesting | [View](./Slingshot.md) |
+| **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted.md)  |
+| **Eviction**  | MITRE ATT&CK Navigator                               | [View](./Eviction.md)   |
+| **Slingshot** | Elastic Stack, Kibana                                | [View](./Slingshot.md)  |
+| **Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
 
 > 📌 More labs and formats (Markdown, PDF) will be added regularly.
 
