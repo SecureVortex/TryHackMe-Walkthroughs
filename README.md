@@ -8,7 +8,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 
 ## Walkthroughs
 
-| 🔗 Lab Name   | 🧠 Focus Areas                                       | 📄 Walkthrough |
+| Lab Name   | Focus Areas                                       | Walkthrough |
 |--------------|-------------------------------------------------------|----------------|
 | **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted.md)  |
 | **Eviction**  | MITRE ATT&CK Navigator                               | [View](./Eviction.md)   |
@@ -16,7 +16,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
 | **PS Eclipse**   | Splunk, Ransomware                                | [View](./PS_Eclipse.md)  |
 
-> 📌 More labs and formats (Markdown, PDF) will be added regularly.
+> More labs and formats (Markdown, PDF) will be added regularly.
 
 ---
 
