@@ -19,24 +19,31 @@ During normal SOC monitoring, Analyst John observed an alert on an IDS solution 
 Our task in this room will be to examine the network connection logs of this user, find the link and the content of the file, and answer the questions.
 
 **Q1. How many events were returned for the month of March 2022?**
+
 Answer: _1482_
 
 **Q2. What is the IP associated with the suspected user in the logs?**
+
 Answer: _192.166.65.54_
 
 **Q3. The user’s machine used a legit windows binary to download a file from the C2 server. What is the name of the binary?**
+
 Answer: _bitsadmin_
 
 **Q4. The infected machine connected with a famous filesharing site in this period, which also acts as a C2 server used by the malware authors to communicate. What is the name of the filesharing site?**
+
 Answer: _pastebin.com_
 
 **Q5. What is the full URL of the C2 to which the infected host is connected?**
+
 Answer: _pastebin.com/yTg0Ah6a_
 
 **Q6. A file was accessed on the filesharing site. What is the name of the file accessed?**
+
 Answer: _secret.txt_
 
 **Q7. The file contains a secret code with the format THM{_____}.**
+
 Answer: _THM{SECRET__CODE}_
 
 
