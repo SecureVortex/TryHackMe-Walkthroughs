@@ -32,9 +32,11 @@ Task: You are assigned to investigate this situation. Use Splunk to answer the q
 Q1. Can you identify the location of the ransomware?
 Answer: _C:\Users\Administrator\Documents\cmd.exe_
 
+
 Q2. What is the Sysmon event ID for the related file creation event?
 
 Answer: _11_
+
 
 
 Q3. Can you find the MD5 hash of the ransomware?
@@ -42,9 +44,11 @@ Q3. Can you find the MD5 hash of the ransomware?
 Answer: _290c7dfb01e50cea9e19da81a781af2c_
 
 
+
 Q4. What file was saved to multiple folder locations?
 
 Answer: _readme.txt_
+
 
 
 Q5. What was the command the attacker used to add a new user to the compromised system?
@@ -52,9 +56,11 @@ Q5. What was the command the attacker used to add a new user to the compromised 
 Answer: _net user /add securityninja hardToHack123$_
 
 
+
 Q6. The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?
 
 Answer: _C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,C:\Windows\System32\wbem\unsecapp.exe_
+
 
 
 Q7. The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?
@@ -62,14 +68,17 @@ Q7. The attacker also retrieved the system hashes. What is the process image use
 Answer: _C:\Windows\System32\lsass.exe_
 
 
+
 Q8. What is the web shell the exploit deployed to the system?
 
 Answer: _i3gfPctK1c2x.aspx_
 
 
-Q0. What is the command line that executed this web shell?
+
+Q9. What is the command line that executed this web shell?
 
 Answer: _attrib.exe  -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\i3gfPctK1c2x.aspx_
+
 
 
 Q10. What three CVEs did this exploit leverage? Provide the answer in ascending order.
