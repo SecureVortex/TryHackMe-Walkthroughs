@@ -16,6 +16,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
 | **PS Eclipse**   | Splunk, Ransomware                                | [View](./PS_Eclipse.md)  |
 | **Itsy Bitsy**   | Elastic, Ransomware                                | [View](./ItsyBitsy.md)  |
+| **Conti**   | Splunk, Ransomware, Sysmon                                | [View](./Conti.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
