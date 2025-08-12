@@ -1,3 +1,8 @@
+**CONTI RANSOMWARE**
+
+<img width="90" height="90" alt="efe12f2572d7ed0e3d94c37c00560bdc" src="https://github.com/user-attachments/assets/c61cf222-1506-44d6-ba75-fcc6480b330e" />
+
+
 **SITREP**
 
 Some employees from your company reported that they can’t log into Outlook. The Exchange system admin also reported that he can’t log in to the Exchange Admin Center. After initial triage, they discovered some weird readme files settled on the Exchange server.  
@@ -34,7 +39,7 @@ Outlook Web Access:
 
 Task: You are assigned to investigate this situation. Use Splunk to answer the questions below regarding the Conti ransomware. 
 
-Q1. Can you identify the location of the ransomware?
+**Q1. Can you identify the location of the ransomware?**
 
 I began by running the query index=* and setting the timeframe to 'All Time' in Splunk to retrieve all available logs. Since Event ID 11 corresponds to FileCreate events triggered when a file is created or overwritten, it’s particularly useful for spotting suspicious file activity. I then filtered the results to only show logs with EventCode=11 to focus on file creation events.
 
@@ -44,14 +49,14 @@ I began by running the query index=* and setting the timeframe to 'All Time' in 
 Answer: _C:\Users\Administrator\Documents\cmd.exe_
 
 
-Q2. What is the Sysmon event ID for the related file creation event?
+**Q2. What is the Sysmon event ID for the related file creation event?**
 
 Based on the question 1, we have identified the Event Code for this question.
 
 Answer: _11_
 
 
-Q3. Can you find the MD5 hash of the ransomware?
+**Q3. Can you find the MD5 hash of the ransomware?**
 
 I searched the image file for the keyword "MD5", which returned a single result. The MD5 hash was clearly listed in that log.
 
@@ -63,7 +68,7 @@ Image="c:\\Users\\Administrator\\Documents\\cmd.exe" "MD5"
 Answer: _290c7dfb01e50cea9e19da81a781af2c_
 
 
-Q4. What file was saved to multiple folder locations?
+**Q4. What file was saved to multiple folder locations?**
 
 I removed the keyword "MD5" from the search and focused on the TargetFileName field, which revealed the same file being created in multiple locations.
 
@@ -73,7 +78,7 @@ I removed the keyword "MD5" from the search and focused on the TargetFileName fi
 Answer: _readme.txt_
 
 
-Q5. What was the command the attacker used to add a new user to the compromised system?
+**Q5. What was the command the attacker used to add a new user to the compromised system?**
 
 In Windows, the net user command is used to add new users to a system, following the format:
 
@@ -87,7 +92,7 @@ I searched for the keyword "/add" in Splunk using the query index=* "/add". This
 Answer: _net user /add securityninja hardToHack123$_
 
 
-Q6. The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?
+**Q6. The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?**
 
 Following the hint, I filtered for Sysmon Event ID 8, which resulted in only two log entries. The second log contained the answer, with the SourceImage and TargetImage fields revealing the relevant processes.
 
@@ -97,7 +102,7 @@ Following the hint, I filtered for Sysmon Event ID 8, which resulted in only two
 Answer: _C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,C:\Windows\System32\wbem\unsecapp.exe_
 
 
-Q7. The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?
+**Q7. The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?**
 
 The answer was found in the first log entry, in the TargetImage field.
 
@@ -107,7 +112,7 @@ The answer was found in the first log entry, in the TargetImage field.
 Answer: _C:\Windows\System32\lsass.exe_
 
 
-Q8. What is the web shell the exploit deployed to the system?
+**Q8. What is the web shell the exploit deployed to the system?**
 
 The hint indicated checking the IIS logs for POST requests. I changed the sourcetype to iis and filtered the cs_method field for POST.
 
@@ -121,7 +126,7 @@ Knowing from research that .aspx is a common web shell extension, I searched for
 Answer: _i3gfPctK1c2x.aspx_
 
 
-Q9. What is the command line that executed this web shell?
+**Q9. What is the command line that executed this web shell?**
 
 I searched for the web shell name in the query, and the first log entry contained the CommandLine field with the required answer. 
 
@@ -131,7 +136,7 @@ I searched for the web shell name in the query, and the first log entry containe
 Answer: _attrib.exe  -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\i3gfPctK1c2x.aspx_
 
 
-Q10. What three CVEs did this exploit leverage? Provide the answer in ascending order.
+**Q10. What three CVEs did this exploit leverage? Provide the answer in ascending order.**
 
 I Googled about the Conti Ransomware CVEs and came across this link - https://www.cyfirma.com/news/weekly-cyber-security-trends/, which contained the CVEs for Conti Ransomware.
 
