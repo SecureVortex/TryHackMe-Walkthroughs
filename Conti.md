@@ -33,31 +33,49 @@ Q1. Can you identify the location of the ransomware?
 Answer: _C:\Users\Administrator\Documents\cmd.exe_
 
 Q2. What is the Sysmon event ID for the related file creation event?
+
 Answer: _11_
 
+
 Q3. Can you find the MD5 hash of the ransomware?
+
 Answer: _290c7dfb01e50cea9e19da81a781af2c_
 
+
 Q4. What file was saved to multiple folder locations?
+
 Answer: _readme.txt_
 
+
 Q5. What was the command the attacker used to add a new user to the compromised system?
+
 Answer: _net user /add securityninja hardToHack123$_
 
+
 Q6. The attacker migrated the process for better persistence. What is the migrated process image (executable), and what is the original process image (executable) when the attacker got on the system?
+
 Answer: _C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,C:\Windows\System32\wbem\unsecapp.exe_
 
+
 Q7. The attacker also retrieved the system hashes. What is the process image used for getting the system hashes?
+
 Answer: _C:\Windows\System32\lsass.exe_
 
+
 Q8. What is the web shell the exploit deployed to the system?
+
 Answer: _i3gfPctK1c2x.aspx_
 
+
 Q0. What is the command line that executed this web shell?
+
 Answer: _attrib.exe  -r \\\\win-aoqkg2as2q7.bellybear.local\C$\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\i3gfPctK1c2x.aspx_
 
+
 Q10. What three CVEs did this exploit leverage? Provide the answer in ascending order.
+
 Answer: _CVE-2018-13374,CVE-2018-13379,CVE-2020-0796_
+
 
 
 
