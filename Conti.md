@@ -8,10 +8,15 @@ Below is a copy of the ransomware note.
 Warning: Do NOT attempt to visit and/or interact with any URLs displayed in the ransom note. 
 Read the latest on the Conti ransomware here. 
 Connect to OpenVPN or use the AttackBox to access the attached Splunk instance. 
+
 Splunk Interface Credentials:
+
 Username: bellybear
+
 Password: password!!!
+
 Splunk URL: http://MACHINE_IP:8000
+
 
 **Exchange Server Compromised**
 
