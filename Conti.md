@@ -30,6 +30,7 @@ Outlook Web Access:
 Task: You are assigned to investigate this situation. Use Splunk to answer the questions below regarding the Conti ransomware. 
 
 Q1. Can you identify the location of the ransomware?
+
 Answer: _C:\Users\Administrator\Documents\cmd.exe_
 
 
