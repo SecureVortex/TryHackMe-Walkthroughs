@@ -21,9 +21,6 @@ Q2. Provide the full path where the ransomware initially got executed? (Include 
 
 Double-click on exploree.exe to open it in the Launcher. The executable’s path will already be pre-filled. In Windump, load the traffic.pcap file and then refresh the view. This will generate a visual chart of the activity.
 
-<img width="438" height="95" alt="image" src="https://github.com/user-attachments/assets/d9743db6-42f6-41e2-a248-f3828420119f" />
-
-
 By zooming in, the execution path of the executable file becomes clearly visible.
 
 <img width="438" height="95" alt="image" src="https://github.com/user-attachments/assets/cf2c8800-e973-4d59-9e41-0bf17816c72b" />
@@ -44,10 +41,7 @@ Answer: _mojobiden.com,paymenthacks.com_
 
 Q3. What are the IPs of the malicious domains? (no space in the answer)
 
-The investigation also uncovered the IP addresses linked to the exploree.exe executable.
-
-<img width="777" height="305" alt="image" src="https://github.com/user-attachments/assets/47c1f2d7-6d94-42ad-bbb6-8a5d537612ed" />
-
+As shown in the screenshot from the previous step, the investigation also identified the IP addresses associated with the exploree.exe executable.
 
 Answer: _146.112.61.108,206.188.197.206_
 
