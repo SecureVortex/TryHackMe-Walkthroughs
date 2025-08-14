@@ -18,6 +18,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **Itsy Bitsy**   | Elastic, Ransomware                               | [View](./ItsyBitsy.md)  |
 | **Conti**   | Splunk, Ransomware, Sysmon                             | [View](./Conti.md)  |
 | **Dunkle Materie**   | Wireshark, Ransomware, ProcDOT                | [View](./Dunkle_Materie.md)  |
+| **Monday Monitor**   |                 | [View](./Monday_Monitor.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
