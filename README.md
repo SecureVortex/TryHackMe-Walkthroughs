@@ -19,7 +19,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **Conti**   | Splunk, Ransomware, Sysmon                             | [View](./Conti.md)  |
 | **Dunkle Materie**   | Wireshark, Ransomware, ProcDOT                | [View](./Dunkle_Materie.md)  |
 | **Monday Monitor**   |                 | [View](./Monday_Monitor.md)  |
-| **Secret Recipe**   |  Registry Explorer               | [View](./Secret_recipe.md)  |
+| **Secret Recipe**   |  Registry Explorer               | [View](./Secret_Recipe.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
