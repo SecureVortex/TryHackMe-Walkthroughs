@@ -101,11 +101,3 @@ I ran the IP address through VirusTotal, which revealed additional malware hoste
 
 
 Answer: _951F41930489A8BFE963FCED5D8DFD79_
-
-
-**📌 Summary**
-
-In this walkthrough, I investigated malware samples and their related infrastructure. The analysis began with identifying the sender of malicious files, extracting and hashing a DLL, and mapping it to the MgBot malware framework. Using open-source intelligence (OSINT) and threat reports, I tied the sample to a MITRE ATT&CK technique (T1123). Finally, I traced malicious URLs, C2 servers, and even Android spyware hosted on the same infrastructure.
-
-
-
