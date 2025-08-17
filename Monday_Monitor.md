@@ -80,7 +80,3 @@ When I opened the message field from the identified event, I finally found the f
 
 
 Answer: _THM{M0N1T0R_1$_1N_3FF3CT}_
-
-**Summary**
-
-In this room, I used Wazuh to investigate suspicious activity on a Windows host. By filtering and analyzing logs, I was able to trace how the attacker gained initial access, created persistence through scheduled tasks, attempted credential dumping with Mimikatz, and escalated privileges by adding accounts to the Administrators group. I also decoded an encoded string and examined PowerShell activity, which ultimately led to finding the flag.
