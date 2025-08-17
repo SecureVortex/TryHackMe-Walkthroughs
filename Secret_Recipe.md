@@ -223,8 +223,3 @@ This one was straightforward. I ran a search and quickly found the result.
 
 
 Answer: _C:\Users\Administrator\Downloads\tools\Everything\Everything.exe_
-
-
-**Summary**
-
-In this walkthrough, I performed Windows registry forensics on a compromised system to uncover traces of attacker activity. By loading different hives (SYSTEM, SOFTWARE, SAM, and NTUSER.DAT) into Registry Explorer, I identified system configuration details, user accounts, suspicious backdoor creation, network connections, shared folders, and evidence of executed programs. The analysis revealed both legitimate system usage and malicious behavior, including the creation of a backdoor account (bdoor) and the use of ProtonVPN and other tools.
