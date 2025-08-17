@@ -227,4 +227,4 @@ Answer: _C:\Users\Administrator\Downloads\tools\Everything\Everything.exe_
 
 **Summary**
 
-In this investigation, I analyzed Windows event logs through Wazuh to identify malicious activity. The attacker initially gained access by executing a downloaded file, created a new user account with administrator privileges, and used tools like Mimikatz and PowerShell to dump credentials and maintain persistence. By filtering specific event IDs, process executions, and command-line entries, I was able to reconstruct the sequence of attacker actions and retrieve key indicators, such as the password of the newly created user.
+In this walkthrough, I performed Windows registry forensics on a compromised system to uncover traces of attacker activity. By loading different hives (SYSTEM, SOFTWARE, SAM, and NTUSER.DAT) into Registry Explorer, I identified system configuration details, user accounts, suspicious backdoor creation, network connections, shared folders, and evidence of executed programs. The analysis revealed both legitimate system usage and malicious behavior, including the creation of a backdoor account (bdoor) and the use of ProtonVPN and other tools.
