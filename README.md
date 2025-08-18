@@ -10,17 +10,18 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 
 | Lab Name   | Focus Areas                                       | Walkthrough |
 |--------------|-------------------------------------------------------|----------------|
-| **Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted.md)  |
-| **Eviction**  | MITRE ATT&CK Navigator                               | [View](./Eviction.md)   |
-| **Slingshot** | Elastic Stack, Kibana                                | [View](./Slingshot.md)  |
-| **Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
-| **PS Eclipse**   | Splunk, Ransomware                                | [View](./PS_Eclipse.md)  |
-| **Itsy Bitsy**   | Elastic, Ransomware                               | [View](./ItsyBitsy.md)  |
-| **Conti**   | Splunk, Ransomware, Sysmon                             | [View](./Conti.md)  |
-| **Dunkle Materie**   | Wireshark, Ransomware, ProcDOT                | [View](./Dunkle_Materie.md)  |
-| **Monday Monitor**   | Wazuh, Mimikatz                               | [View](./Monday_Monitor.md)  |
-| **Secret Recipe**   |  Registry Explorer                           | [View](./Secret_Recipe.md)  |
-| **Friday Overtime**   |  MITRE ATT&CK, Cyberchef, Virustotal         | [View](./Friday_Overtime.md)  |
+| **1. Retracted** | Linux, Enumeration, Privilege Escalation             | [View](./Retracted.md)  |
+| **2. Eviction**  | MITRE ATT&CK Navigator                               | [View](./Eviction.md)   |
+| **3. Slingshot** | Elastic Stack, Kibana                                | [View](./Slingshot.md)  |
+| **4. Carnage**   | Wireshark                                            | [View](./Carnage.md)    |
+| **5. PS Eclipse**   | Splunk, Ransomware                                | [View](./PS_Eclipse.md)  |
+| **6. Itsy Bitsy**   | Elastic, Ransomware                               | [View](./ItsyBitsy.md)  |
+| **7. Conti**   | Splunk, Ransomware, Sysmon                             | [View](./Conti.md)  |
+| **8. Dunkle Materie**   | Wireshark, Ransomware, ProcDOT                | [View](./Dunkle_Materie.md)  |
+| **9. Monday Monitor**   | Wazuh, Mimikatz                               | [View](./Monday_Monitor.md)  |
+| **10. Secret Recipe**   |  Registry Explorer                             | [View](./Secret_Recipe.md)  |
+| **11. Friday Overtime**   |  MITRE ATT&CK, Cyberchef, Virustotal         | [View](./Friday_Overtime.md)  |
+| **12. Benign**   |  Splunk, Windows Event Logs                           | [View](./Benign.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
