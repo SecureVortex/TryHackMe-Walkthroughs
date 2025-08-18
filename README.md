@@ -11,7 +11,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | Lab Name   | Focus Areas                                       | Walkthrough |
 |--------------|-------------------------------------------------------|----------------|
 | **1. Retracted** | Linux, Enumeration, Privilege Escalation              | [View](./Retracted.md)  |
-| **2. Eviction**  | MITRE ATT&CK Navigator                                | [View](./Eviction.md)   |
+| **2. Eviction**  | MITRE ATT&CK Navigator, APT 28                        | [View](./Eviction.md)   |
 | **3. Slingshot** | Elastic Stack, Kibana                                 | [View](./Slingshot.md)  |
 | **4. Carnage**   | Wireshark, Cobalt Strike                              | [View](./Carnage.md)    |
 | **5. PS Eclipse**   | Splunk, Ransomware                                 | [View](./PS_Eclipse.md)  |
