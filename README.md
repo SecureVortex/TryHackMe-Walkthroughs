@@ -23,8 +23,8 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **11. Friday Overtime**   |  MITRE ATT&CK, Cyberchef, Virustotal         | [View](./Friday_Overtime.md)  |
 | **12. Benign**   |  Splunk, Windows Event Logs                           | [View](./Benign.md)  |
 | **13. Trooper**   |   MITRE ATT&CK navigator, OpenCTI                    | [View](./Trooper.md)  |
-| **14. Hunt Me I: Payment Collectors**   | Elastic, Mimikatz              | [View](./Hunt_Me_I:Payment_Collectors.md)  |
-| **15. Hunt Me II: Typo Squatters**   | Elastic, Sysmon, Exfiltration     | [View](./Hunt_Me_II:Typo_Squatters.md)  |
+| **14. Hunt Me I: Payment Collectors**   | Elastic, Sysmon, Exfiltration  | [View](./Hunt_Me_I:Payment_Collectors.md)  |
+| **15. Hunt Me II: Typo Squatters**   | Elastic, Mimikatz                 | [View](./Hunt_Me_II:Typo_Squatters.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
