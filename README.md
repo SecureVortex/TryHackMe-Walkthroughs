@@ -22,6 +22,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **10. Secret Recipe**   |  Registry Explorer                             | [View](./Secret_Recipe.md)  |
 | **11. Friday Overtime**   |  MITRE ATT&CK, Cyberchef, Virustotal         | [View](./Friday_Overtime.md)  |
 | **12. Benign**   |  Splunk, Windows Event Logs                           | [View](./Benign.md)  |
+| **13. Trooper**   |   MITRE ATT&CK navigator, OpenCTI                    | [View](./Trooper.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
