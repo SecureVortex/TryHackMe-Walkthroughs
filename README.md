@@ -25,6 +25,8 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **13. Trooper**   |   MITRE ATT&CK navigator, OpenCTI                    | [View](./Trooper.md)  |
 | **14. Hunt Me I: Payment Collectors**   | Elastic, Sysmon, Exfiltration  | [View](./Hunt_Me_I:Payment_Collectors.md)  |
 | **15. Hunt Me II: Typo Squatters**   | Elastic, Mimikatz                 | [View](./Hunt_Me_II:Typo_Squatters.md)  |
+| **16. SigHunt**   | Sigma Rules, Detection Engineering, IOCs                 | [View](./SigHunt.md)  |
+| **17. Aurora EDR**   | ETW, Endpoint Detection, Response Actions                 | [View](./Aurora_EDR.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
