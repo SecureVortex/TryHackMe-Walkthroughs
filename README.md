@@ -33,6 +33,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 - [LinkedIn – pranaysingh47](https://linkedin.com/in/pranaysingh47)
 - Email: `pranaysingh95@yahoo.co.in`
 - [GitHub – pranaysingh47](https://github.com/pranaysingh47)
+- [TryHackMe – Pr4n4yS1n9h](https://tryhackme.com/p/Pr4n4yS1n9h)
 
 If you find these helpful or have suggestions, feel free to star ⭐ the repo or open an issue!
 
