@@ -318,4 +318,4 @@ What we've learned:
 4. Response actions and automation capabilities
 5. Event IDs and their significance
 6. Detection gaps and mitigation strategies
-7. Running and configuring Aurora for optimal threat detection
+
