@@ -27,6 +27,14 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **15. Hunt Me II: Typo Squatters**   | Elastic, Mimikatz                 | [View](./Hunt_Me_II:Typo_Squatters.md)  |
 | **16. SigHunt**   | Sigma Rules, Detection Engineering, IOCs             | [View](./SigHunt.md)  |
 | **17. Aurora EDR**   | ETW, Endpoint Detection, Response Actions         | [View](./Aurora_EDR.md)  |
+| **18. Tardigrade**   | Memory Forensics, Volatility, Malware Analysis     | [View](./Tardigrade.md)  |
+| **19. Fixit**   | Incident Response, System Recovery, Log Analysis      | [View](./Fixit.md)  |
+| **20. CALDERA**   | Red Team Simulation, MITRE ATT&CK, Automation       | [View](./CALDERA.md)  |
+| **21. Unattended**   | Windows Privilege Escalation, Enumeration           | [View](./Unattended.md)  |
+| **22. Malbuster**   | Malware Analysis, Reverse Engineering, IDA          | [View](./Malbuster.md)  |
+| **23. Tempest**   | Network Analysis, APT Investigation, Wireshark      | [View](./Tempest.md)  |
+| **24. Redline**   | Memory Forensics, FireEye Redline, IOC Analysis     | [View](./Redline.md)  |
+| **25. Autopsy**   | Digital Forensics, File System Analysis, Timeline   | [View](./Autopsy.md)  |
 
 > More labs and formats (Markdown, PDF) will be added regularly.
 
