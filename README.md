@@ -35,6 +35,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **23. Tempest**   | Network Analysis, APT Investigation, Wireshark       | [View](./Tempest.md)  |
 | **24. Redline**   | Memory Forensics, FireEye Redline, IOC Analysis      | [View](./Redline.md)  |
 | **25. Autopsy**   | Digital Forensics, File System Analysis, Timeline    | [View](./Autopsy.md)  |
+| **26. Investigating Windows**   | Powershell, Event Viewer, Mimikatz     | [View](./Investigating_Windows.md)  |
 
 
 > More labs and formats (Markdown, PDF) will be added regularly.
