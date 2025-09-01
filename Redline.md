@@ -145,12 +145,12 @@ Answer: _Standard Collector_
 Answer: _IOC Search Collector_
 
 
-**Q3. What script would you run to initiate the data collection process? Please include the file extension. **
+**Q3. What script would you run to initiate the data collection process? Please include the file extension.**
 
 Answer: _RunRedlineAudit.bat_
 
 
-**Q4. If you want to collect the data on Disks and Volumes, under which option can you find it? **
+**Q4. If you want to collect the data on Disks and Volumes, under which option can you find it?**
 
 Answer: _Disk Enumeration_
 
@@ -398,40 +398,141 @@ The screenshot below is of a file with the most amount of "Hits", which means it
 
 You should be ready to answer the questions below using the screenshots provided in the task and perform these similar actions in the upcoming task!
 
-Q1. What is the actual filename of the Keylogger? 
+**Q1. What is the actual filename of the Keylogger?**
 
-Answer: psylog.exe
+Answer: _psylog.exe_
 
+**Q2. What filename is the file masquerading as?**
 
-Q2. What filename is the file masquerading as? 
+Answer: _THM1768.exe_
 
-Answer: THM1768.exe
+**Q3. Who is the owner of the file?**
 
-Q3. Who is the owner of the file? 
+Answer: _WIN-2DET5DP0NPT\charles_
 
+**Q4. What is the file size in bytes?** 
 
+Answer: _35400_
 
-Q4. What is the file size in bytes? 
+**Q5. Provide the full path of where the .ioc file was placed after the Redline analysis, include the .ioc filename as well**
 
-
-
-Q5. Provide the full path of where the .ioc file was placed after the Redline analysis, include the .ioc filename as well
-
-
-
+Answer: _C:\Users\charles\Desktop\Keylogger-IOCSearch\IOCs\keylogger.ioc_
 
 
+**IOC Search Collector Analysis**
+
+Scenario: You are assigned to do a threat hunting task at Osinski Inc. They believe there has been an intrusion, and the malicious actor was using the tool to perform the lateral movement attack, possibly a "pass-the-hash" attack.
+
+Task: Can you find the file planted on the victim's computer using IOC Editor and Redline IOC Search Collector? 
+
+So far, you only know the following artifacts for the file: 
+
+File Strings: 
+
+    20210513173819Z0w0=
+    <?<L<T<g=
+
+File Size (Bytes): 
+
+    834936
+
+Note: Use the existing Redline Session found in: C:\Users\Administrator\Documents\Analysis\Sessions\AnalysisSession1.
+
+**Q1. Provide the path of the file that matched all the artifacts along with the filename.**
+
+Answer: _C:\Users\Administrator\AppData\Local\Temp\8eJv8w2id6IqN85dfC.exe_
+
+**Q2. Provide the path where the file is located without including the filename.**
+
+Answer: _C:\Users\Administrator\AppData\Local\Temp\_
+
+**Q3. Who is the owner of the file?**
+
+Answer: _BUILTIN\Administrators_
+
+**Q4. Provide the subsystem for the file.**
+
+Answer: _Windows_CUI_
+
+**Q5. Provide the Device Path where the file is located.**
+
+Answer: _\Device\HarddiskVolume2_
+
+**Q6. Provide the hash (SHA-256) for the file.**
+
+Answer: _57492d33b7c0755bb411b22d2dfdfdf088cbbfcd010e30dd8d425d5fe66adff4_
+
+**Q7. The attacker managed to masquerade the real filename. Can you find it having the hash in your arsenal?**
+
+Answer: _PsExec.exe_
+
+
+**Endpoint Ivnestigation**
+
+Scenario : A Senior Accountant, Charles, is complaining that he cannot access the spreadsheets and other files he has been working on. He also mentioned that his wallpaper got changed with the saying that his files got encrypted. This is not good news!
+
+Are you ready to perform the memory analysis of the compromised host? You have all the data you need to do some investigation on the victim's machine. Let's go hunting!
+
+Task :
+
+    Navigate to the folder on your Desktop titled Endpoint Investigation.
+    Double-click on the AnalysisSession1.mans  file. The data will be imported automatically into Redline.
+    Analyze the file to answer  the questions below.
+
+Note: Give it up to 10 minutes for all the data import.  
 
 
 
 
+Q1. **Can you identify the product name of the machine?**
+
+Answer: _Windows 7 Home Basic_
 
 
+Q2. **Can you find the name of the note left on the Desktop for the "Charles"?**
+
+Answer: __R_E_A_D___T_H_I_S___AJYG1O_.txt_
 
 
+Q3. **Find the Windows Defender service; what is the name of its service DLL?**
+
+Answer: _MpSvc.dll_
 
 
+Q4. **The user manually downloaded a zip file from the web. Can you find the filename?**
+
+Answer: _eb5489216d4361f9e3650e6a6332f7ee21b0bc9f3f3a4018c69733949be1d481_
 
 
+Q5. **Provide the filename of the malicious executable that got dropped on the user's Desktop.**
 
+Answer: _Endermanch@Cerber5.exe_
+
+
+Q6. **Provide the MD5 hash for the dropped malicious executable.**
+
+Answer: _fe1bc60a95b2c2d77cd5d232296a7fa4_
+
+
+Q7. **What is the name of the ransomware?** 
+
+Answer: _Cerber_
+
+
+**Conclusion**
+
+As you have seen, Redline is a powerful tool that can guide you through analyzing the compromised host. You also need to consider that the accuracy of the analysis will depend on what kind of data you want to collect. 
+
+Remember, Redline collects various data for analysis, including running processes, services, files, registry structures, event logs, etc. 
+
+While solving the room tasks, you might have noticed that Timeline can be useful when searching for specific keywords. The Timeline can give you an idea of when the attack started and what following actions the attacker took. 
+
+Here is the reference list for you if you missed it in the previous tasks:
+
+    Redline User Guide: https://fireeye.market/assets/apps/211364/documents/877936_en.pdf
+    IOC Editor User Guide: https://fireeye.market/assets/apps/S7cWpi9W//9cb9857f/ug-ioc-editor.pdf
+
+Congratulations! Now you have learned a new tool. If you would like to challenge yourself, we recommend the REvil Corp room next. 
+
+Happy Hunting!
 
