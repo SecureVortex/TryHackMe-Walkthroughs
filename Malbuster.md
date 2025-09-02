@@ -1,248 +1,164 @@
-**MALBUSTER - ADVANCED MALWARE ANALYSIS**
+This room aims to be a practice room for Dissecting PE Headers and Static Analysis 1. In this scenario, you will act as one of the Reverse Engineers that will analyse malware samples based on the detections reported by your SOC team.
 
-**Introduction**
+Prerequisites
 
-Welcome to Malbuster, an advanced malware analysis challenge! As a malware analyst at CyberDefense Labs, you've been tasked with analyzing a sophisticated piece of malware that has been causing havoc in corporate networks. This sample has been evading traditional antivirus solutions and requires manual analysis to understand its capabilities.
+This room requires basic knowledge of Malware Static Analysis. We recommend going through the following rooms before attempting this challenge.
 
-In this room, you'll perform static and dynamic analysis of a malware sample, reverse engineer its functionality, and develop indicators of compromise (IOCs) that can be used to detect similar threats.
+Intro to Malware Analysis
+Dissecting PE Headers
+Basic Static Analysis
+﻿Scenario
 
-**Tools Available**
-- IDA Pro (Disassembler)
-- x64dbg (Debugger)
-- Process Monitor (ProcMon)
-- Process Hacker
-- Wireshark
-- YARA rule writer
-- Hex Workshop
+You are currently working as a Malware Reverse Engineer for your organisation. Your team acts as a support for the SOC team when detections of unknown binaries occur. One of the SOC analysts triaged an alert triggered by binaries with unusual behaviour. Your task is to analyse the binaries detected by your SOC team and provide enough information to assist them in remediating the threat.
 
-**Warning**
-This room contains actual malware samples. Only interact with the malware in the provided isolated environment. Do not download or execute these samples on your personal systems.
+Investigation Platforms  
 
-**Scenario: Banking Trojan Investigation**
+<img width="921" height="560" alt="image" src="https://github.com/user-attachments/assets/0baadb6a-f032-4784-b934-eb8670219550" />
 
-A major financial institution has reported suspicious activities in their network. Several workstations have been compromised, and there's evidence of unauthorized banking transactions. The security team managed to isolate a suspicious executable that appears to be the source of the compromise.
+The team has provided two investigation platforms, a FLARE VM and a REMnux VM. You may utilise the machines based on your preference.﻿
 
-Your mission is to analyze this malware sample and provide:
-1. Technical analysis of the malware's capabilities
-2. Network indicators (C2 servers, communication protocols)
-3. Host-based indicators (files, registry keys, processes)
-4. YARA rules for detection
-5. Remediation recommendations
+If you prefer FLARE VM, you may start the machine attached to this task. Else, you may start the machine on the task below to start REMnux VM.
 
-**Lab Environment Setup**
+The machine will start in a split-screen view. In case the VM is not visible, use the blue Show Split View button at the top-right of the page.
 
-Connect to the analysis workstation where the malware sample is located at `C:\Analysis\sample.exe`. The environment includes all necessary tools for comprehensive malware analysis.
+You may also use the following credentials for alternative access via Remote Desktop (RDP):
 
-<img width="520" height="320" alt="analysis-environment" src="https://github.com/user-attachments/assets/t7u8v9w0-x1y2-z3a4-b5c6-d7e8f9g0h1i2" />
+<img width="661" height="431" alt="image" src="https://github.com/user-attachments/assets/741d0043-87d6-471c-aa20-c8d9275fe161" />
 
-**Q1. What is the MD5 hash of the malware sample?**
+Lastly, you may find the malware samples on C:\Users\Administrator\Desktop\Samples. 
 
-I started by calculating the basic file hashes to establish a baseline for the sample:
+WE ADVISE YOU NOT TO DOWNLOAD THE MALWARE SAMPLES TO YOUR HOST.
 
-```cmd
-certutil -hashfile C:\Analysis\sample.exe MD5
-certutil -hashfile C:\Analysis\sample.exe SHA256
-```
+**Challenge Questions**
 
-<img width="680" height="180" alt="file-hashes" src="https://github.com/user-attachments/assets/u8v9w0x1-y2z3-a4b5-c6d7-e8f9g0h1i2j3" />
+﻿Investigation Platform
 
-Answer: _d41d8cd98f00b204e9800998ecf8427e_
+If you prefer REMnux, you may use the machine attached to this task by accessing it via the split-screen view.
 
-**Q2. What packer is used to obfuscate the malware?**
+Else, start the machine from the previous task to spin up the FLARE VM.
 
-Using DIE (Detect It Easy) and PEiD to identify any packers or obfuscation techniques:
+In addition, you can find the malware samples provided by the SOC team at /home/ubuntu/Desktop/Samples. 
 
-```cmd
-die.exe C:\Analysis\sample.exe
-```
+The machine will start in a split-screen view. In case the VM is not visible, use the blue Show Split View button at the top-right of the page.
 
-The analysis revealed the presence of a specific packer commonly used by malware authors.
+WE ADVISE YOU NOT TO DOWNLOAD THE MALWARE SAMPLES TO YOUR HOST.
 
-<img width="740" height="340" alt="packer-detection" src="https://github.com/user-attachments/assets/v9w0x1y2-z3a4-b5c6-d7e8-f9g0h1i2j3k4" />
+Good luck!﻿
 
-Answer: _UPX_
 
-**Q3. What is the unpacked size of the malware?**
 
-After identifying the packer, I unpacked the sample to analyze the original code:
+**Q1. Based on the ARCHITECTURE of the binary, is malbuster_1 a 32-bit or a 64-bit application? (32-bit/64-bit)**
 
-```cmd
-upx -d C:\Analysis\sample.exe -o C:\Analysis\unpacked.exe
-```
+Answer: _32-bit_
 
-Checking the file size of the unpacked sample:
 
-Answer: _485376_
+**Q2. What is the MD5 hash of malbuster_1?**
 
-**Q4. What API function is used for process injection?**
+Answer: _4348da65e4aeae6472c7f97d6dd8ad8f_
 
-Loading the unpacked sample in IDA Pro and analyzing the imported functions to identify process injection capabilities:
 
-<img width="860" height="460" alt="ida-analysis" src="https://github.com/user-attachments/assets/w0x1y2z3-a4b5-c6d7-e8f9-g0h1i2j3k4l5" />
+**Q3. Using the hash, what is the popular threat label of malbuster_1 according to VirusTotal?**
 
-The imports table revealed several suspicious APIs commonly used for process injection.
+Amswer: **trojan.zbot/razy**
 
-Answer: _VirtualAllocEx_
 
-**Q5. What is the C2 server domain hardcoded in the malware?**
+**Q4. Based on VirusTotal detection, what is the malware signature of malbuster_2 according to Avira?**
 
-Using string analysis and examining the disassembly for network-related functions:
+Answer: _HEUR/AGEN.1306860_
 
-```cmd
-strings C:\Analysis\unpacked.exe | findstr -i "http\|www\|\.com\|\.net"
-```
 
-<img width="720" height="280" alt="string-analysis" src="https://github.com/user-attachments/assets/x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6" />
+**Q5. malbuster_2 imports the function _CorExeMain. From which DLL file does it import this function?**
 
-Answer: _malicious-banking-c2.com_
+Answer: _mscoree.dll_
 
-**Q6. What port does the malware use for C2 communication?**
 
-Continuing the string analysis and examining network configuration constants in the disassembly:
-
-The analysis revealed the hardcoded port used for command and control communication.
-
-Answer: _8443_
-
-**Q7. What registry key is created for persistence?**
-
-Running the malware in a controlled environment while monitoring registry changes with Process Monitor:
-
-```cmd
-# Monitoring registry changes during execution
-procmon.exe /accepteula /quiet /minimized /BackingFile C:\Analysis\procmon.pml
-```
-
-<img width="880" height="420" alt="registry-monitoring" src="https://github.com/user-attachments/assets/y2z3a4b5-c6d7-e8f9-g0h1-i2j3k4l5m6n7" />
-
-Answer: _HKCU\Software\Microsoft\Windows\CurrentVersion\Run\SecurityUpdate_
-
-**Q8. What encryption algorithm is used to encrypt stolen data?**
-
-Analyzing the cryptographic functions in the disassembly and looking for algorithm-specific constants:
-
-```assembly
-; IDA Pro analysis showing crypto constants
-mov eax, 61707865h    ; "xpe" constant
-mov ebx, 6B206574h    ; AES-related constant
-```
-
-Answer: _AES-256_
-
-**Dynamic Analysis Results**
-
-Running the malware in the isolated environment while monitoring its behavior:
-
-**Network Activity:**
-- Establishes connection to malicious-banking-c2.com:8443
-- Uses HTTPS for encrypted communication
-- Sends system information and banking session data
-- Downloads additional payloads on command
-
-**File System Activity:**
-- Creates temporary files in %TEMP%\{random}.tmp
-- Modifies browser configuration files
-- Installs browser hooks for form grabbing
-- Creates encrypted log files for stolen data
-
-**Process Activity:**
-- Injects into browser processes (chrome.exe, firefox.exe, iexplore.exe)
-- Creates hidden windows for credential harvesting
-- Monitors clipboard for cryptocurrency addresses
-- Screenshots banking sessions
-
-**Registry Modifications:**
-- Creates persistence mechanism in Run key
-- Modifies browser security settings
-- Stores configuration data in encrypted registry values
-
-**YARA Rule Development**
-
-Based on the analysis, I developed the following YARA rule:
-
-```yara
-rule BankingTrojan_Malbuster {
-    meta:
-        description = "Detects banking trojan analyzed in Malbuster challenge"
-        author = "SOC Analyst"
-        date = "2024-01-15"
-        hash = "d41d8cd98f00b204e9800998ecf8427e"
-        
-    strings:
-        $c2_domain = "malicious-banking-c2.com" ascii wide
-        $persistence_key = "SecurityUpdate" ascii wide
-        $api1 = "VirtualAllocEx" ascii
-        $api2 = "WriteProcessMemory" ascii
-        $api3 = "CreateRemoteThread" ascii
-        $crypto = { 61 70 70 65 6B 20 65 74 }  // AES constants
-        
-    condition:
-        pe.is_pe and 
-        (
-            $c2_domain or
-            ($persistence_key and 2 of ($api*)) or
-            $crypto
-        ) and
-        filesize < 1MB
-}
-```
-
-**Indicators of Compromise (IOCs)**
-
-**File Indicators:**
-- MD5: d41d8cd98f00b204e9800998ecf8427e
-- SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-- File size: 485,376 bytes (unpacked)
-- Creation time: Varies (runtime packer)
-
-**Network Indicators:**
-- C2 Domain: malicious-banking-c2.com
-- C2 Port: 8443
-- Communication: HTTPS with custom certificate
-- User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Banking/1.0
-
-**Host Indicators:**
-- Registry: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\SecurityUpdate
-- Files: %TEMP%\*.tmp (encrypted logs)
-- Processes: Injection into browser processes
-- Network: Outbound HTTPS connections on port 8443
-
-**Behavioral Indicators:**
-- Form grabbing in banking websites
-- Cryptocurrency address replacement in clipboard
-- Screenshot capture during banking sessions
-- Browser security setting modifications
-
-**Mitigation Recommendations**
-
-**Immediate Actions:**
-1. Block C2 domain at network perimeter
-2. Search for IOCs across the environment
-3. Review banking transaction logs for anomalies
-4. Quarantine infected systems
-
-**Long-term Security Improvements:**
-1. Implement application whitelisting
-2. Deploy advanced endpoint protection
-3. Enhance network monitoring for HTTPS inspection
-4. User awareness training for banking security
-5. Implement certificate pinning for banking applications
-
-**Attribution Analysis**
-
-The malware shows characteristics consistent with:
-- Advanced persistent threat (APT) groups targeting financial institutions
-- Use of legitimate tools for living-off-the-land techniques
-- Sophisticated evasion techniques including packing and encryption
-- Professional development with error handling and anti-analysis features
-
-**Conclusion**
-
-The Malbuster banking trojan represents a sophisticated threat designed specifically for financial fraud. Its use of process injection, encrypted communication, and browser hooking demonstrates advanced capabilities that require comprehensive defense strategies beyond traditional antivirus solutions.
-
-Key takeaways from this analysis:
-1. Modern malware uses multiple layers of obfuscation
-2. Dynamic analysis is essential for understanding true capabilities
-3. Network-based detection is crucial for C2 identification
-4. Behavioral analysis provides valuable detection opportunities
-5. Comprehensive IOC development requires both static and dynamic analysis
+**Q6. Based on the VS_VERSION_INFO header, what is the original name of malbuster_2?**
+
+Answer: _7JYpE.exe_
+
+
+**Q7. Using the hash of malbuster_3, what is its malware signature based on abuse.ch?**
+
+Answer: _TrickBot_
+
+
+**Q8. Using the hash of malbuster_4, what is its malware signature based on abuse.ch?**
+
+Answer: _Zloader_
+
+
+**Q9. What is the message found in the DOS_STUB of malbuster_4?**
+
+Answer: _!This Salfram cannot be run in DOS mode._
+
+
+**Q10. malbuster_4 imports the function ShellExecuteA. From which DLL file does it import this function?**
+
+Answer: _shell32.dll_
+
+
+**Q11. Using capa, how many anti-VM instructions were identified in malbuster_1?**
+
+Answer: _3_
+
+
+**Q12. Using capa, which binary can log keystrokes?**
+
+Answer: _malbuster_3_
+
+
+**Q13. Using capa, what is the MITRE ID of the DISCOVERY technique used by malbuster_4?**
+
+Answer: _T1083_
+
+
+**Q14. Which binary contains the string GodMode?**
+
+Amswer: _malbuster_2_
+
+
+**Q15. Which binary contains the string Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)?**
+
+Answer: _malbuster_1_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
