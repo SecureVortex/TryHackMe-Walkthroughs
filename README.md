@@ -31,7 +31,7 @@ Each walkthrough includes step-by-step documentation of my approach, tools used,
 | **19. Fixit**   | Incident Response, System Recovery, Log Analysis       | [View](./Fixit.md)  |
 | **20. CALDERA**   | Red Team Simulation, MITRE ATT&CK, Automation        | [View](./CALDERA.md)  |
 | **21. Unattended**   | Windows Privilege Escalation, Enumeration         | [View](./Unattended.md)  |
-| **22. Malbuster**   | Malware Analysis, Reverse Engineering, IDA         | [View](./Malbuster.md)  |
+| **22. Malbuster**   | Flare VM, Virustotal, Trickbot, ZLoader, Razy      | [View](./Malbuster.md)  |
 | **23. Tempest**   | Network Analysis, APT Investigation, Wireshark       | [View](./Tempest.md)  |
 | **24. Redline**   | Memory Forensics, Redline, IOC Analysis, Cerber      | [View](./Redline.md)  |
 | **25. Autopsy**   | Digital Forensics, File System Analysis, Timeline    | [View](./Autopsy.md)  |
